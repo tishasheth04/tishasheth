@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Tisha Sheth's Personal Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/T.S.jpg"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li> <a href="index.html">HOME</a></li>
+                        <li> <a href="about.html">ABOUT</a></li>
+                        <li> <a href="project.html">PROJECTS</a></li>
+                        <li> <a href="experience.html">EXPERIENCE</a></li>
+                        <li> <a href="contact.html">CONTACT ME</a></li>
+                    </ul>
+
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+            </nav>
+            
+            <h1>About Me!</h1>
+        
+        </section>
+
+
+ <!---ABOUT US CONTENT-->
+
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1> A little about me! </h1>
+            <p>Hey there! 👋 I am Tisha Sheth, an Honors student at the University of Guelph, currently pursuing a degree in Computer Science. With a passion for coding and a talent for problem-solving, I have consistently maintained an 80% average throughout my semesters, demonstrating my ability to balance academic excellence with technical proficiency.
+                <p>Coding is more than just an academic pursuit for me; it is an opportunity to explore and innovate with new frameworks and languages. Whether building innovative projects or tackling complex problems, I find great satisfaction in the challenges and opportunities that coding presents.</p>
+                
+                <p>One of my most notable academic experiences was in the Software Systems Development and Integration course, where I developed a full-stack virtual pool game. This project involved coding the physics engine and ensuring the simulation adhered to both physical and programming principles.</p>
+                
+                <p>Beyond the classroom, I have gained valuable experience in various tech roles, from IT support to full-stack development. Each co-op term has provided me with unique insights and opportunities to explore different career paths within the tech industry.</p>
+                
+               <p> When I'm not coding or chasing down bugs, you'll find me at the piano or planning my next adventure. 🎹 Whether I'm crafting music or writing code, my goal is to keep learning and growing—one project at a time. 🚀
+                
+                </p>
+        </div>
+
+        <div class="about-col">
+            <img src="images/IMG_5176.jpg">
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+<!------FOOTER-->
+
+<section class="footer">
+    <h4> Connect with me!</h4>
+    <div class="icons">
+        <a href="https://www.linkedin.com/in/tisha-sheth-963964260/">
+            <img src="images/296ba00c8098dee633d2eab414cea364-removebg-preview.png">
+        </a>
+    </div>
+    
+
+</section>
+
+
+    <!---------------JAVASCRIPT CODE---------------------->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+            document.getElementById("navLinks").style.display = "block";
+        }
+
+        function hideMenu() {
+            document.getElementById("navLinks").style.display = "none";
+        }
+        </script>
+
+    </body>
+</html>
