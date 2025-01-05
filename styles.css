@@ -355,40 +355,67 @@ h3{
     padding: 60px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* optional, for spacing between image and text */
+    gap: 40px; /* Increase gap for spacing between image and text */
+    justify-content: space-between;
 }
 
-.blog-left {
-    flex-basis: 15%; /* set the image to take 15% of the width */
-}
-
+.blog-left,
 .blog-right {
-    flex-basis: 85%; /* set the text to take 85% of the width */
-    margin-left: 20px; /* add space between the image and the text */
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-left img {
     width: 100%;
+    max-width: 250px; /* Reduced from 300px to 250px for a smaller image */
+    height: auto;
+    display: block;
+    margin-bottom: 10px; /* Add space below the image */
 }
 
+.blog-right {
+    flex: 3; /* Allow the text to take more space */
+    justify-content: flex-start;
+}
+
+/* Ensure the image in .blog-left is responsive */
+.blog-left img {
+    width: 100%;
+    max-width: 300px; /* Limit the image size */
+    height: auto;
+    display: block; /* Prevent spacing below the image */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Style the text in .blog-right */
 .blog-right h1 {
-    color: #000000;
+    color: #000;
     font-weight: 600;
-    margin: 30px 0;
+    margin-bottom: 10px; /* Reduced space below the heading */
 }
 
-/* Optional: make the layout stack vertically on very small screens */
+.blog-right p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Ensure layout adjusts properly for small screens */
 @media (max-width: 600px) {
     .experience-content {
         flex-direction: column;
+        align-items: center; /* Center content when stacking vertically */
     }
 
-    .blog-left,
-    .blog-right {
-        flex-basis: 100%;
-        margin-left: 0; /* remove margin in vertical layout */
+    .blog-left, .blog-right {
+        flex: 1 1 100%; /* Stack the elements and take full width */
+        margin-right: 0; /* Reset margin on smaller screens */
     }
 }
+
+
+
+
+
 
 
 /* Contact Me Page */
