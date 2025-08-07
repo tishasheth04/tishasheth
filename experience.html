@@ -4,12 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Tisha Sheth</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Add this -->
 </head>
 <body>
   <section class="sub-header">
     <nav>
       <a href="index.html"><img src="images/T.S.jpg"></a>
       <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i> <!-- CLOSE ICON -->
         <ul>
           <li><a href="index.html">HOME</a></li>
           <li><a href="about.html">ABOUT</a></li>
@@ -18,6 +20,7 @@
           <li><a href="contact.html">CONTACT ME</a></li>
         </ul>
       </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i> <!-- HAMBURGER ICON -->
     </nav>
     <h1>My Experience</h1>
   </section>
@@ -39,5 +42,16 @@
       </a>
     </div>
   </section>
+
+  <!-- Add JavaScript for toggle menu -->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.display = "block";
+    }
+    function hideMenu() {
+      navLinks.style.display = "none";
+    }
+  </script>
 </body>
 </html>
